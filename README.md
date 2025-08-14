@@ -1,4 +1,4 @@
-# kharachguru
+# kharach_guru
 
 A new Flutter project.
 
