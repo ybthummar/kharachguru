@@ -1,0 +1,23 @@
+{
+    "@@locale": "en",
+    "kharachGuru": "KharachGuru",
+    "transactions": "Transactions",
+    "reports": "Reports",
+    "addTransaction": "Add New Transaction",
+    "noTransactions": "No Transactions Yet.",
+    "addNewTransactionPrompt": "Press + to add a new one.",
+    "amount": "Amount",
+    "description": "Description",
+    "category": "Category",
+    "isThisIncome": "Is this an income?",
+    "date": "Date",
+    "saveTransaction": "Save Transaction",
+    "totalSummary": "Total Summary",
+    "totalIncome": "Total Income",
+    "totalExpense": "Total Expense",
+    "expenseCategories": "Expense Categories",
+    "incomeCategories": "Income Categories",
+    "noTransactionsFound": "No transactions found.",
+    "noDataForReport": "No data available for report.",
+    "noExpenseData": "No expense data to display."
+}

@@ -6,19 +6,31 @@ import 'package:kharach_guru/data/models/transaction.dart';
 import 'package:kharach_guru/data/repository/transaction_repository.dart';
 import 'package:kharach_guru/features/home/screens/home_screen.dart';
 import 'package:kharach_guru/features/transactions/bloc/transactions_bloc.dart';
+import 'package:provider/provider.dart';
+import 'package:kharach_guru/l10n/app_localizations.dart';
+
+class LocaleProvider extends ChangeNotifier {
+  Locale _locale = const Locale('en');
+  Locale get locale => _locale;
+
+  void setLocale(Locale locale) {
+    _locale = locale;
+    notifyListeners();
+  }
+}
 
 void main() async {
-  // Ensure that Flutter bindings are initialized
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Initialize Hive for local storage
   await Hive.initFlutter();
-  // Register the adapter for your Transaction model
   Hive.registerAdapter(TransactionAdapter());
-  // Open the box where transactions will be stored
   await Hive.openBox<Transaction>('transactions');
 
-  runApp(const KharachGuruApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => LocaleProvider(),
+      child: const KharachGuruApp(),
+    ),
+  );
 }
 
 class KharachGuruApp extends StatelessWidget {
@@ -26,17 +38,20 @@ class KharachGuruApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Provides the TransactionRepository to the widget tree
+    final localeProvider = Provider.of<LocaleProvider>(context);
+
     return RepositoryProvider(
       create: (context) => TransactionRepository(),
-      // Provides the TransactionBloc to manage state
       child: BlocProvider(
         create: (context) => TransactionBloc(
           context.read<TransactionRepository>(),
-        )..add(LoadTransactions()), // Initial event to load data
+        )..add(LoadTransactions()),
         child: MaterialApp(
           title: 'KharachGuru',
-          theme: AppTheme.lightTheme,
+          theme: AppTheme.darkTheme,
+          locale: localeProvider.locale,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
           home: const HomeScreen(),
           debugShowCheckedModeBanner: false,
         ),

@@ -1,0 +1,23 @@
+{
+    "@@locale": "gu",
+    "kharachGuru": "ખર્ચગુરુ",
+    "transactions": "વ્યવહારો",
+    "reports": "અહેવાલ",
+    "addTransaction": "નવો વ્યવહાર ઉમેરો",
+    "noTransactions": "કોઈ વ્યવહાર નથી.",
+    "addNewTransactionPrompt": "નવો ઉમેરવા માટે + દબાવો.",
+    "amount": "રકમ",
+    "description": "વર્ણન",
+    "category": "શ્રેણી",
+    "isThisIncome": "આવક છે?",
+    "date": "તારીખ",
+    "saveTransaction": "વ્યવહાર સાચવો",
+    "totalSummary": "કુલ સારાંશ",
+    "totalIncome": "કુલ આવક",
+    "totalExpense": "કુલ ખર્ચ",
+    "expenseCategories": "ખર્ચની શ્રેણીઓ",
+    "incomeCategories": "આવકની શ્રેણીઓ",
+    "noTransactionsFound": "કોઈ વ્યવહાર મળ્યા નથી.",
+    "noDataForReport": "અહેવાલ માટે કોઈ ડેટા નથી.",
+    "noExpenseData": "કોઈ ખર્ચનો ડેટા નથી."
+}

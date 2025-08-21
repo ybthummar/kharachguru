@@ -1,0 +1,23 @@
+{
+    "@@locale": "hi",
+    "kharachGuru": "खर्चगुरु",
+    "transactions": "लेन-देन",
+    "reports": "रिपोर्ट",
+    "addTransaction": "नया लेन-देन जोड़ें",
+    "noTransactions": "कोई लेन-देन नहीं।",
+    "addNewTransactionPrompt": "नया जोड़ने के लिए + दबाएं।",
+    "amount": "रकम",
+    "description": "विवरण",
+    "category": "श्रेणी",
+    "isThisIncome": "क्या यह आय है?",
+    "date": "तारीख",
+    "saveTransaction": "लेन-देन सहेजें",
+    "totalSummary": "कुल सारांश",
+    "totalIncome": "कुल आय",
+    "totalExpense": "कुल खर्च",
+    "expenseCategories": "व्यय श्रेणियाँ",
+    "incomeCategories": "आय श्रेणियाँ",
+    "noTransactionsFound": "कोई लेन-देन नहीं मिला।",
+    "noDataForReport": "रिपोर्ट के लिए कोई डेटा नहीं।",
+    "noExpenseData": "कोई व्यय डेटा नहीं।"
+}
