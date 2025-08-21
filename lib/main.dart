@@ -4,7 +4,8 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:kharach_guru/core/theme/app_theme.dart';
 import 'package:kharach_guru/data/models/transaction.dart';
 import 'package:kharach_guru/data/repository/transaction_repository.dart';
-import 'package:kharach_guru/features/home/screens/home_screen.dart';
+// Import the new splash screen
+import 'package:kharach_guru/features/home/screens/splash_screen.dart'; 
 import 'package:kharach_guru/features/transactions/bloc/transactions_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:kharach_guru/l10n/app_localizations.dart';
@@ -48,11 +49,12 @@ class KharachGuruApp extends StatelessWidget {
         )..add(LoadTransactions()),
         child: MaterialApp(
           title: 'KharachGuru',
-          theme: AppTheme.darkTheme,
+          theme: AppTheme.lightTheme,
           locale: localeProvider.locale,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
-          home: const HomeScreen(),
+          // Updated home to point to the SplashScreen
+          home: const SplashScreen(), 
           debugShowCheckedModeBanner: false,
         ),
       ),

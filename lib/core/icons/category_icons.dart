@@ -23,7 +23,6 @@ const Map<String, IconData> categoryIcons = {
   'परिवહન': Icons.directions_bus_rounded,
   'अन्य': Icons.more_horiz_rounded,
 
-
   // Income
   'Salary': Icons.account_balance_wallet_rounded,
   'Business': Icons.business_center_rounded,
